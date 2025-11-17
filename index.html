@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GlobalBridge - Shop the World, Delivered to Libya</title>
+
+    <!-- We will load Tailwind CSS from a CDN for simplicity -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* Use the Inter font family */
+
+        body {
+
+            font-family: 'Inter', sans-serif;
+
+        }
+
+    </style>
+
+</head>
+
+<body class="bg-gray-50">
+
+
+
+    <!-- Header -->
+
+    <header class="bg-white shadow-sm">
+
+        <div class="container mx-auto max-w-5xl px-4 py-4 flex justify-between items-center">
+
+            <h1 class="text-2xl font-bold text-blue-600">GlobalBridge.ly</h1>
+
+            <a href="#quote-form" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+
+                Get a Quote
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Hero Section -->
+
+    <main class="container mx-auto max-w-5xl px-4 mt-12">
+
+        <section class="text-center">
+
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+
+                Shop the World's Biggest Stores.
+
+                <br>
+
+                <span class="text-blue-600">We Deliver to Your Door in Libya.</span>
+
+            </h2>
+
+            <p class="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+
+                Found something you love on Amazon, SHEIN, Temu, or any other global store?
+
+                We handle the purchase, shipping, and customs. You just shop.
+
+            </p>
+
+            <a href="#quote-form" class="mt-8 inline-block bg-blue-600 text-white text-lg px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
+
+                Start Your Order
+
+            </a>
+
+        </section>
+
+
+
+        <!-- How It Works Section -->
+
+        <section class="mt-20">
+
+            <h3 class="text-3xl font-bold text-center text-gray-900">How It Works</h3>
+
+            <div class="mt-10 grid md:grid-cols-3 gap-8">
+
+                <!-- Step 1 -->
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+
+                    <div class="text-2xl font-bold text-blue-600">1.</div>
+
+                    <h4 class="text-xl font-semibold text-gray-900 mt-2">You Find It</h4>
+
+                    <p class="text-gray-600 mt-2">
+
+                        Browse any online store like Amazon, SHEIN, or Temu. When you find what you want, copy the product's URL.
+
+                    </p>
+
+                </div>
+
+                <!-- Step 2 -->
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+
+                    <div class="text-2xl font-bold text-blue-600">2.</div>
+
+                    <h4 class="text-xl font-semibold text-gray-900 mt-2">Request a Quote</h4>
+
+                    <p class="text-gray-600 mt-2">
+
+                        Paste the product link into our simple form below. We'll calculate the total price (item + shipping + fees) and email you a quote.
+
+                    </p>
+
+                </div>
+
+                <!-- Step 3 -->
+
+                <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
+
+                    <div class="text-2xl font-bold text-blue-600">3.</div>
+
+                    <h4 class="text-xl font-semibold text-gray-900 mt-2">We Deliver</h4>
+
+                    <p class="text-gray-600 mt-2">
+
+                        Once you approve and pay the quote, we buy the item, ship it to our hub, and manage all logistics until it arrives at your doorstep in Libya.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Quote Form Section -->
+
+        <section id="quote-form" class="mt-20 bg-white p-8 rounded-lg shadow-md border border-gray-200">
+
+            <h3 class="text-3xl font-bold text-center text-gray-900">Request Your Free Quote</h3>
+
+            <p class="text-center text-gray-600 mt-2">
+
+                Fill this out, and we'll email you a full, all-inclusive price. No hidden fees.
+
+            </p>
+
+
+
+            <!-- This is the container for the form and the success message -->
+
+            <div id="form-container" class="mt-8 max-w-2xl mx-auto">
+
+
+
+                <!-- The success message, hidden by default -->
+
+                <div id="success-message" class="hidden text-center bg-green-100 border border-green-300 text-green-800 px-4 py-6 rounded-lg">
+
+                    <h4 class="text-2xl font-bold">Thank You!</h4>
+
+                    <p class="text-lg mt-2">Your quote request has been submitted.</p>
+
+                    <p class="mt-1">We will email you the full quote within 24 business hours.</p>
+
+                </div>
+
+
+
+                <!-- The actual form. We give it an ID to target it with JavaScript. -->
+
+                <form id="request-form" class="grid grid-cols-1 gap-6">
+
+                    <div>
+
+                        <label for="product-url" class="block text-sm font-medium text-gray-700">Product URL *</label>
+
+                        <input type="url" name="product-url" id="product-url" required
+
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+
+                            placeholder="https://www.amazon.com/product-link...">
+
+                    </div>
+
+                    <div>
+
+                        <label for="product-name" class="block text-sm font-medium text-gray-700">Product Name *</label>
+
+                        <input type="text" name="product-name" id="product-name" required
+
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+
+                            placeholder="e.g., Men's Running Shoes">
+
+                    </div>
+
+                    <div>
+
+                        <label for="product-options" class="block text-sm font-medium text-gray-700">Options (Size, Color, etc.) *</label>
+
+                        <input type="text" name="product-options" id="product-options" required
+
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+
+                            placeholder="e.g., Size: 10, Color: Black">
+
+                    </div>
+
+                    
+
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <div>
+
+                            <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity *</label>
+
+                            <input type="number" name="quantity" id="quantity" required value="1" min="1"
+
+                                class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+
+                        </div>
+
+                        <div>
+
+                            <label for="original-price" class="block text-sm font-medium text-gray-700">Price on Original Site (USD) *</label>
+
+                            <input type="text" name="original-price" id="original-price" required
+
+                                class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+
+                                placeholder="e.g., 25.99">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <hr class="my-4">
+
+
+
+                    <h4 class="text-xl font-semibold text-gray-800">Your Contact & Delivery Info</h4>
+
+
+
+                    <div>
+
+                        <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name *</label>
+
+                        <input type="text" name="full-name" id="full-name" required
+
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+
+                        <input type="email" name="email" id="email" required
+
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+
+                            placeholder="So we can send you the quote">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label for="delivery-address" class="block text-sm font-medium text-gray-700">Full Delivery Address (in Libya) *</labe>
+
+                        <textarea name="delivery-address" id="delivery-address" rows="3" required
+
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+
+                            placeholder="e.g., Street Name, Building, Apartment, City"></textarea>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number *</label>
+
+                        <input type="tel" name="phone" id="phone" required
+
+                            class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+
+                            placeholder="For delivery coordination">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <button type="submit"
+
+                            class="w-full bg-blue-600 text-white text-lg px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+
+                            Submit Quote Request
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-800 mt-20">
+
+        <div class="container mx-auto max-w-5xl px-4 py-8 text-center text-gray-400">
+
+            © 2025 GlobalBridge.ly. All rights reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <script>
+
+        // --- Form Submission Logic ---
+
+        // This JavaScript will find the form, listen for a "submit" event,
+
+        // send the data to your Make.com webhook, and THEN show the success message.
+
+
+
+        const form = document.getElementById('request-form');
+
+        const formContainer = document.getElementById('form-container');
+
+        const successMessage = document.getElementById('success-message');
+
+        
+
+        // --- !!! PASTE YOUR MAKE.COM WEBHOOK URL HERE !!! ---
+
+        const webhookURL = 'https://hook.us2.make.com/4jkjrcztqst43p9t5dd1p8gm93cesro8'; 
+
+        // --- e.g., 'https://hook.eu1.make.com/a1b2c3d4e5f6g7h8' ---
+
+
+
+        form.addEventListener('submit', function(event) {
+
+            // Prevent the form from actually submitting (which would cause a page reload)
+
+            event.preventDefault();
+
+
+
+            // 1. Create a data object from the form
+
+            // We use the 'id' of each input field
+
+            const formData = {
+
+                productURL: document.getElementById('product-url').value,
+
+                productName: document.getElementById('product-name').value,
+
+                productOptions: document.getElementById('product-options').value,
+
+                quantity: document.getElementById('quantity').value,
+
+                originalPrice: document.getElementById('original-price').value,
+
+                fullName: document.getElementById('full-name').value,
+
+                email: document.getElementById('email').value,
+
+                deliveryAddress: document.getElementById('delivery-address').value,
+
+                phone: document.getElementById('phone').value
+
+            };
+
+
+
+            // 2. Send the data to the Make.com webhook
+
+            fetch(webhookURL, {
+
+                method: 'POST',
+
+                headers: {
+
+                    'Content-Type': 'application/json'
+
+                },
+
+                body: JSON.stringify(formData)
+
+            })
+
+            .then(response => {
+
+                if (response.ok) {
+
+                    // 3. If the data was sent successfully, show the success message
+
+                    // Hide the form
+
+                    form.classList.add('hidden');
+
+                    // Show the success message
+
+                    successMessage.classList.remove('hidden');
+
+                    // Optional: Scroll back to the top of the form container to show the message
+
+                    formContainer.scrollIntoView({ behavior: 'smooth' });
+
+                } else {
+
+                    // Handle errors if the webhook fails
+
+                    alert('Error: Could not submit quote. Please try again.');
+
+                }
+
+            })
+
+            .catch(error => {
+
+                // Handle network errors
+
+                console.error('Fetch Error:', error);
+
+                alert('Error: Could not connect. Please check your internet connection.');
+
+            });
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
